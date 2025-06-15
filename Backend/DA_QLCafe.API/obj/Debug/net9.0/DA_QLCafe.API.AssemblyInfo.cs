@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DA_QLCafe.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0b043c0f1eb07a2d97ee9d5d76cfb7440960861")]
 [assembly: System.Reflection.AssemblyProductAttribute("DA_QLCafe.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DA_QLCafe.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

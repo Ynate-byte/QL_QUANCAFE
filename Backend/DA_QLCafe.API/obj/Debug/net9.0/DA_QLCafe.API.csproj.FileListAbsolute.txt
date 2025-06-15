@@ -68,6 +68,7 @@ D:\DA_QLCafe\Backend\DA_QLCafe.API\obj\Debug\net9.0\DA_QLCafe.API.AssemblyInfo.c
 D:\DA_QLCafe\Backend\DA_QLCafe.API\obj\Debug\net9.0\DA_QLCafe.API.csproj.CoreCompileInputs.cache
 D:\DA_QLCafe\Backend\DA_QLCafe.API\obj\Debug\net9.0\DA_QLCafe.API.MvcApplicationPartsAssemblyInfo.cs
 D:\DA_QLCafe\Backend\DA_QLCafe.API\obj\Debug\net9.0\DA_QLCafe.API.MvcApplicationPartsAssemblyInfo.cache
+D:\DA_QLCafe\Backend\DA_QLCafe.API\obj\Debug\net9.0\DA_QLCafe.API.sourcelink.json
 D:\DA_QLCafe\Backend\DA_QLCafe.API\obj\Debug\net9.0\scopedcss\bundle\DA_QLCafe.API.styles.css
 D:\DA_QLCafe\Backend\DA_QLCafe.API\obj\Debug\net9.0\staticwebassets.build.json
 D:\DA_QLCafe\Backend\DA_QLCafe.API\obj\Debug\net9.0\staticwebassets.build.json.cache
