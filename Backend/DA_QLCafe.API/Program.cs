@@ -18,13 +18,13 @@ const string DevCorsPolicy = "DevCorsPolicy";
 /// </summary>
 builder.Services.AddSingleton<DbContext>();
 builder.Services.AddScoped<IBanHangService, BanHangService>();
-builder.Services.AddScoped<IKhachHangService, IKhachHangService>();
+builder.Services.AddScoped<IKhachHangService, KhachHangService>(); // <-- ĐÃ SỬA DÒNG NÀY
 builder.Services.AddScoped<IMenuService, MenuService>();
 builder.Services.AddScoped<IKhoService, KhoService>();
 builder.Services.AddScoped<ICongThucService, CongThucService>();
 builder.Services.AddScoped<IBaoCaoService, BaoCaoService>();
 builder.Services.AddScoped<INhanSuService, NhanSuService>();
-builder.Services.AddScoped<IKhuyenMaiService, IKhuyenMaiService>();
+builder.Services.AddScoped<IKhuyenMaiService, KhuyenMaiService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IPhanHoiService, PhanHoiService>();
 builder.Services.AddScoped<IDatBanService, DatBanService>();
