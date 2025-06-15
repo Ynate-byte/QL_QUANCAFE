@@ -16,24 +16,24 @@ const string DevCorsPolicy = "DevCorsPolicy";
 /// <summary>
 /// Đăng ký các dịch vụ vào container dependency injection.
 /// </summary>
-builder.Services.AddSingleton<DbContext>(); // Đăng ký DbContext là singleton
+builder.Services.AddSingleton<DbContext>();
 builder.Services.AddScoped<IBanHangService, BanHangService>();
-builder.Services.AddScoped<IKhachHangService, KhachHangService>();
+builder.Services.AddScoped<IKhachHangService, IKhachHangService>();
 builder.Services.AddScoped<IMenuService, MenuService>();
 builder.Services.AddScoped<IKhoService, KhoService>();
 builder.Services.AddScoped<ICongThucService, CongThucService>();
 builder.Services.AddScoped<IBaoCaoService, BaoCaoService>();
 builder.Services.AddScoped<INhanSuService, NhanSuService>();
-builder.Services.AddScoped<IKhuyenMaiService, KhuyenMaiService>();
+builder.Services.AddScoped<IKhuyenMaiService, IKhuyenMaiService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IPhanHoiService, PhanHoiService>();
 builder.Services.AddScoped<IDatBanService, DatBanService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IQuanLyBanService, QuanLyBanService>();
 
-builder.Services.AddControllers(); // Thêm dịch vụ controllers
-builder.Services.AddEndpointsApiExplorer(); // Khám phá API cho Swagger/OpenAPI
-builder.Services.AddSwaggerGen(); // Thêm dịch vụ Swagger/OpenAPI Generator
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 #endregion
 
 #region Authentication Configuration
@@ -49,13 +49,13 @@ builder.Services.AddAuthentication(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateIssuer = true, // Xác thực Issuer của token
-        ValidateAudience = true, // Xác thực Audience của token
-        ValidateLifetime = true, // Xác thực thời gian sống của token
-        ValidateIssuerSigningKey = true, // Xác thực khóa ký của token
-        ValidIssuer = builder.Configuration["Jwt:Issuer"], // Issuer hợp lệ từ cấu hình
-        ValidAudience = builder.Configuration["Jwt:Audience"], // Audience hợp lệ từ cấu hình
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]!)) // Khóa ký bí mật
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]!))
     };
 });
 #endregion
@@ -68,10 +68,13 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(DevCorsPolicy, policy =>
     {
-        // Cho phép yêu cầu từ địa chỉ của server frontend Vite
-        policy.WithOrigins("http://localhost:5173") 
-              .AllowAnyMethod() // Cho phép tất cả các phương thức HTTP (GET, POST, PUT, DELETE, v.v.)
-              .AllowAnyHeader(); // Cho phép tất cả các header
+        // === ĐẢM BẢO HAI ĐỊA CHỈ NÀY CÓ MẶT TRONG PROGRAM.CS CỦA BẠN ===
+        policy.WithOrigins(
+            "http://localhost:5173", // Frontend cục bộ của bạn
+            "https://aquamarine-sunshine-6f864f.netlify.app" // <--- ĐỊA CHỈ CỦA FRONTEND ĐÃ TRIỂN KHAI TRÊN NETLIFY
+        )
+        .AllowAnyMethod()
+        .AllowAnyHeader();
     });
 });
 #endregion
@@ -84,19 +87,19 @@ var app = builder.Build();
 /// </summary>
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger(); // Sử dụng Swagger trong môi trường phát triển
-    app.UseSwaggerUI(); // Sử dụng Swagger UI trong môi trường phát triển
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 // Luôn sử dụng CORS Policy trước UseAuthentication và UseAuthorization
 app.UseCors(DevCorsPolicy);
 
-app.UseAuthentication(); // Bật xác thực
-app.UseAuthorization(); // Bật ủy quyền
+app.UseAuthentication();
+app.UseAuthorization();
 
-app.MapControllers(); // Ánh xạ các controller API
+app.MapControllers();
 #endregion
 
 #region Application Run
-app.Run(); // Chạy ứng dụng
+app.Run();
 #endregion
