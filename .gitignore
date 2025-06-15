@@ -1,0 +1,60 @@
+# General Logs and Cache
+logs/
+*.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
+lerna-debug.log
+
+# Node.js / Frontend Specific
+node_modules/
+dist/          # Thư mục build của Vite (Frontend)
+build/         # Thư mục build phổ biến khác cho React
+*.local        # Các file môi trường cục bộ (ví dụ: .env.local, .env.development.local)
+.vite/         # Thư mục cache của Vite
+
+# .NET Core / Backend Specific Build Output
+# General build output directories
+[Bb]in/        # Thư mục bin (chứa các file thực thi đã biên dịch)
+[Oo]bj/        # Thư mục obj (chứa các file tạm thời, cache trong quá trình build)
+[Pp]ublish/    # Thư mục publish (chứa kết quả deploy)
+
+# Specific .NET cache/asset files that might be in obj/ and need explicit ignore if not covered by obj/
+# (These paths are relative to the project directory where the .csproj resides)
+**/obj/**/project.assets.json
+**/obj/**/project.nuget.cache
+**/obj/**/*.g.props
+**/obj/**/*.g.targets
+**/obj/**/*.json 
+**/obj/**/*.cache 
+
+# IDE / OS Specific Files
+.vs/           # Thư mục .vs của Visual Studio
+*.user        # File .user của Visual Studio
+*.suo         # File Solution User Options của Visual Studio
+*.suo.bak     # Backup của .suo
+*.vsp         # File Performance của Visual Studio
+*.bak         # File sao lưu chung
+*.pdb         # Ký hiệu gỡ lỗi (Debugging symbols)
+*.userosscache
+*.opendata
+*.tlog
+*.vspscc
+*.vssscc
+*.buildscc
+*.njsproj     # Project files cho Node.js/JS trong VS
+*.sln.ide
+*.tmp         # File tạm thời
+
+# Database files (nếu có các file database trực tiếp trong repo)
+*.mdf
+*.ldf
+*.sdf
+*.db
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db

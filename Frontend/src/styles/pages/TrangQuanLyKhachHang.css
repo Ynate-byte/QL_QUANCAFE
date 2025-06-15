@@ -1,0 +1,75 @@
+.manager-grid-khachhang {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.section h2, .section h3 {
+    margin-top: 0;
+    color: var(--text-color-dark);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+}
+
+.crud-form .form-group {
+    margin-bottom: 20px;
+}
+
+.crud-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: var(--text-color-light);
+}
+
+.crud-form .form-actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.crud-form .form-actions .action-btn {
+    flex-grow: 1;
+}
+
+.item-list.scrollable-table {
+    max-height: calc(100vh - 220px);
+}
+
+.loyalty-rank-cell {
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 0.85em;
+    min-width: 90px;
+    text-align: center;
+    border: 1px solid transparent;
+    text-transform: capitalize;
+}
+
+.loyalty-thanh-vien { color: #6c757d; background-color: #f8f9fa; border-color: #dee2e6; }
+.loyalty-bac { color: #343a40; background-color: #e9ecef; border-color: #ced4da; }
+.loyalty-vang { color: #b08d57; background-color: #fff3cd; border-color: #ffeeba; }
+.loyalty-kim-cuong { color: #155724; background-color: #d4edda; border-color: #c3e6cb; }
+
+@media (max-width: 992px) {
+    .manager-grid-khachhang {
+        grid-template-columns: 1fr;
+    }
+    .item-list.scrollable-table {
+        max-height: 500px;
+    }
+}

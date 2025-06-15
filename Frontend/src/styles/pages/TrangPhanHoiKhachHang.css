@@ -1,0 +1,49 @@
+/* src/styles/pages/TrangQuanLyKhachHang.css */
+
+.loyalty-rank-cell {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.8em;
+    min-width: 70px;
+    text-align: center;
+}
+
+.loyalty-dong {
+    color: #cd7f32;
+    background-color: rgba(205, 127, 50, 0.1);
+}
+
+.loyalty-bac {
+    color: #c0c0c0;
+    background-color: rgba(192, 192, 192, 0.1);
+}
+
+.loyalty-vang {
+    color: #ffd700;
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+.loyalty-kim-cuong {
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.quanly-container .manager-sections-grid-khachhang { /* Class mới cho grid của trang khách hàng */
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr; /* Thay đổi vị trí: Cột trái 25%, cột phải 75% */
+    gap: 20px;
+    align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+    .quanly-container .manager-sections-grid-khachhang {
+        grid-template-columns: 1fr;
+    }
+}

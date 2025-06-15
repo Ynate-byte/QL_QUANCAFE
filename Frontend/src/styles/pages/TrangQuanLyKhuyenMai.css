@@ -1,0 +1,65 @@
+.manager-grid-khuyenmai {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+.section h2, .section h3 {
+    margin-top: 0;
+    color: var(--text-color-dark);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+}
+
+.crud-form .form-group { margin-bottom: 20px; }
+.crud-form label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.9em; color: var(--text-color-light); }
+.crud-form input, .crud-form textarea, .crud-form select {
+    width: 100%; padding: 10px 12px; border-radius: 6px; border: 1px solid var(--border-color); box-sizing: border-box; 
+    font-family: 'Inter', sans-serif; font-size: 0.95em; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.crud-form input:focus, .crud-form textarea:focus, .crud-form select:focus {
+    outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+.crud-form .form-actions { margin-top: 24px; display: flex; gap: 12px; }
+.crud-form .form-actions .action-btn { flex-grow: 1; }
+.khuyen-mai-form .form-group.full-width { grid-column: 1 / -1; }
+.khuyen-mai-form .form-actions { grid-column: 1 / -1; }
+
+.khuyen-mai-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 0;
+}
+.khuyen-mai-form .form-row .form-group {
+    margin-bottom: 20px;
+}
+.khuyen-mai-form .date-fields-row { /* Thay đổi vị trí: Tạo style riêng cho các ô ngày tháng để chúng xuống dòng */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.status-cell { font-weight: 500; padding: 6px 12px; border-radius: 16px; font-size: 0.85em; text-align: center; white-space: nowrap; text-transform: capitalize; }
+.status-sapdienra { color: #0069d9; background-color: rgba(0, 123, 255, 0.1); }
+.status-dangdienra { color: #1e7e34; background-color: rgba(40, 167, 69, 0.1); }
+.status-daketthuc { color: #6c757d; background-color: rgba(108, 117, 125, 0.1); }
+
+@media (max-width: 992px) {
+    .manager-grid-khuyenmai { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+    .khuyen-mai-form .form-row { grid-template-columns: 1fr; gap: 0; }
+}

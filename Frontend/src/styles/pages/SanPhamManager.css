@@ -1,0 +1,129 @@
+.san-pham-manager {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.san-pham-manager h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.san-pham-manager .loading {
+    text-align: center;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.san-pham-manager .error-message {
+    color: #d32f2f;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 4px;
+}
+
+.san-pham-manager .crud-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.san-pham-manager .crud-form h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+}
+
+.san-pham-manager input,
+.san-pham-manager textarea,
+.san-pham-manager select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.san-pham-manager textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.san-pham-manager .form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.san-pham-manager button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.san-pham-manager .action-btn.save-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.san-pham-manager .action-btn.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.san-pham-manager .action-btn.edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.san-pham-manager .action-btn.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.san-pham-manager .action-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.san-pham-manager .item-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.san-pham-manager .item-list th,
+.san-pham-manager .item-list td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.san-pham-manager .item-list th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.san-pham-manager .item-list .actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.san-pham-manager .item-list .no-data {
+    text-align: center;
+    padding: 10px;
+    color: #666;
+}
+
+.san-pham-manager .item-list tr {
+    height: 40px;
+}

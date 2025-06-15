@@ -1,0 +1,170 @@
+.qr-modal {
+    max-width: 900px;
+    width: 95%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.qr-modal-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+}
+
+.qr-payment-section {
+    background-color: var(--light-bg-color);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.qr-header h3 {
+    margin-top: 0;
+    font-size: 1.4em;
+    color: var(--text-color-dark);
+}
+.qr-header p {
+    color: var(--text-color-light);
+    margin-bottom: 24px;
+}
+
+.qr-code-wrapper {
+    width: 280px;
+    height: 280px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.qr-code-wrapper img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.qr-loading-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.payment-details {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.bank-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    text-align: left;
+}
+.bank-info .bank-name { font-weight: 600; margin: 0; }
+.bank-info .account-number { font-size: 0.9em; margin: 0; }
+
+.amount-info {
+    margin-top: 16px;
+    padding: 16px;
+    background: var(--primary-color-light, rgba(0, 123, 255, 0.1));
+    border-radius: 8px;
+}
+.amount-info .label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.amount-info .amount {
+    display: block;
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.bill-preview-section {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.bill-preview-section h4 {
+    margin-top: 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+.bill-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 280px;
+    padding-right: 10px;
+}
+
+.bill-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 0.95em;
+}
+.bill-item:not(:last-child) { border-bottom: 1px solid #f0f0f0; }
+
+.bill-item .item-name { color: var(--text-color-dark); }
+.bill-item .item-qty { color: var(--text-color-light); font-size: 0.9em; }
+.bill-item .item-price { font-weight: 500; }
+
+.bill-summary {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+.bill-summary .summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.bill-summary .summary-row.discount { color: var(--danger-color); }
+.bill-summary .summary-row.total { font-weight: bold; font-size: 1.4em; color: var(--text-color-dark); margin-top: 12px; }
+
+.payment-footer {
+    margin-top: auto;
+    padding-top: 24px;
+}
+.payment-footer p {
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--text-color-light);
+    margin-bottom: 16px;
+}
+.text-highlight {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+.full-width { width: 100%; }
+.cancel-btn-text {
+    background: none;
+    border: none;
+    color: var(--text-color-light);
+    margin-top: 8px;
+    font-weight: 500;
+}
+.cancel-btn-text:hover { background-color: #f8f9fa; }
+
+@media (max-width: 850px) {
+    .qr-modal-container {
+        grid-template-columns: 1fr;
+    }
+    .qr-payment-section {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color); /* Thay đổi vị trí: border-bottom thay vì border-right */
+    }
+}

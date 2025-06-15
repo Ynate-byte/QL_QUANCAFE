@@ -1,0 +1,128 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    background-color: var(--light-bg-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.login-form {
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.login-form h2 {
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    font-size: 0.95em;
+}
+
+.login-form input,
+.login-form select,
+.login-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-form input:focus,
+.login-form select:focus,
+.login-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 15px;
+}
+
+.login-form button:hover {
+    background-color: var(--primary-dark-color);
+    transform: translateY(-2px);
+}
+
+.login-form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.8;
+    transform: none;
+}
+
+/* Các style cho .ui-message (error-message, success-message) đã được di chuyển sang global/components.css */
+
+.customer-actions {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.customer-actions a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.customer-actions a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.customer-actions span {
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .login-form {
+        margin: 15px;
+        padding: 30px 20px;
+    }
+    .customer-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

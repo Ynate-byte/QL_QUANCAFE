@@ -1,0 +1,112 @@
+/* src/styles/pages/TrangQuanLyDatBan.css */
+
+.manager-grid-datban {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.section {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.section h2, .section h3 {
+    margin-top: 0;
+    color: var(--text-color-dark);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+}
+
+.crud-form .form-group {
+    margin-bottom: 18px;
+}
+
+.crud-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: var(--text-color-light);
+}
+
+.crud-form .form-actions {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.time-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.khach-hang-input-section {
+    position: relative;
+}
+
+.khach-hang-display-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-bg-color);
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-weight: 500;
+}
+
+.khach-hang-display-box .small-btn {
+    padding: 4px 8px;
+    font-size: 0.8em;
+}
+
+.ket-qua-tim-kiem-dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    position: absolute;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.ket-qua-tim-kiem-dropdown li {
+    padding: 10px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+.ket-qua-tim-kiem-dropdown li:last-child { border-bottom: none; }
+.ket-qua-tim-kiem-dropdown li:hover { background-color: #f0f0f0; }
+
+.status-cell {
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.85em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.status-dadat { color: #007bff; background-color: rgba(0, 123, 255, 0.1); }
+.status-daden { color: #28a745; background-color: rgba(40, 167, 69, 0.1); }
+.status-daketthuc { color: #6c757d; background-color: rgba(108, 117, 125, 0.1); }
+.status-dahuy { color: #dc3545; background-color: rgba(220, 53, 69, 0.1); }
+
+@media (max-width: 992px) {
+    .manager-grid-datban {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,176 @@
+/* src/styles/pages/TrangDashboard.css */
+
+:root {
+    --primary-color: #007bff;
+    --primary-dark-color: #0056b3;
+    --accent-color: #28a745;
+    --accent-dark-color: #1e7e34;
+    --danger-color: #dc3545;
+    --danger-dark-color: #b22222;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-bg-color: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-color-dark: #343a40;
+    --text-color-light: #6c757d;
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.075);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.dashboard-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--text-color-dark);
+    font-weight: 600;
+}
+
+.inventory-alert-card .card-header h2 {
+    color: var(--warning-color);
+}
+
+.inventory-alert-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inventory-alert-item {
+    background-color: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid var(--warning-color);
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.inventory-alert-item:last-child {
+    margin-bottom: 0;
+}
+
+.inventory-alert-item .item-name {
+    font-weight: 600;
+    color: var(--text-color-dark);
+}
+
+.inventory-alert-item .item-details {
+    margin-top: 4px;
+    color: var(--text-color-light);
+}
+
+.stat-card {
+    text-align: center;
+    justify-content: center;
+}
+
+.stat-card .stat-value {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 10px 0 5px;
+}
+
+.stat-card .stat-label {
+    font-size: 0.9em;
+    color: var(--text-color-light);
+}
+
+.revenue-card .stat-value {
+    color: var(--accent-color);
+}
+
+.bestseller-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bestseller-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95em;
+}
+
+.bestseller-item:last-child {
+    border-bottom: none;
+}
+
+.bestseller-item .name {
+    font-weight: 500;
+    color: var(--text-color-dark);
+}
+.bestseller-item .count {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.birthday-card .card-header h2 {
+    color: #ff8c00;
+}
+.birthday-card .bestseller-item .name {
+    color: #e91e63;
+}
+
+.chart-card {
+    grid-column: 1 / -1;
+    height: 400px;
+}
+
+.chart-card .recharts-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    .dashboard-card.full-width {
+        height: 350px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-secondary {
+    color: var(--text-color-light);
+}
+
+.text-success {
+    color: var(--accent-color);
+}
+
+.small-btn {
+    padding: 5px 10px;
+    font-size: 0.8em;
+}

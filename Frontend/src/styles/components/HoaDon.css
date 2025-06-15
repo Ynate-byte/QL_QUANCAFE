@@ -1,0 +1,137 @@
+.invoice-box {
+    width: 300px;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.invoice-box h2, .invoice-box h3 {
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.invoice-header-title {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.invoice-address {
+    text-align: center;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.invoice-box hr {
+    border: none;
+    border-top: 1px dashed #bbb;
+    margin: 10px 0;
+}
+
+.invoice-main-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.invoice-details {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.invoice-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.invoice-items-table th, .invoice-items-table td {
+    padding: 5px 0;
+}
+
+.invoice-items-table th {
+    text-align: left;
+    border-bottom: 1px dashed #333;
+    font-size: 0.9em;
+}
+
+.invoice-items-table td:nth-child(2), /* SL */
+.invoice-items-table td:nth-child(3), /* Đơn giá */
+.invoice-items-table td:nth-child(4) { /* Thành tiền */
+    text-align: right;
+}
+
+.invoice-totals {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #bbb;
+}
+
+.invoice-totals .total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+.invoice-totals .surcharge-row {
+    color: #555;
+}
+
+.invoice-totals .discount-row {
+    color: #d9534f;
+}
+
+.invoice-totals .final-total-row {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 8px;
+    border-top: 1px dashed #333;
+    margin-top: 10px;
+    color: #000;
+}
+
+.invoice-thank-you {
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.print-actions {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .invoice-box, .invoice-box * {
+        visibility: visible;
+        print-color-adjust: exact;
+    }
+    .invoice-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80mm; /* Thay đổi vị trí: đặt cố định chiều rộng cho in ấn */
+        margin: 0;
+        padding: 5mm;
+        box-shadow: none;
+    }
+    .modal-overlay, .print-actions {
+        display: none !important;
+    }
+}

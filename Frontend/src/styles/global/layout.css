@@ -1,0 +1,62 @@
+.quanly-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1; /* Để container chiếm hết chiều cao còn lại */
+    background-color: var(--light-bg-color);
+}
+
+.quanly-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 2em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    width: auto;
+}
+
+.manager-sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.section {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    color: var(--text-color-dark);
+    font-size: 1.5em;
+}
+
+.section.full-width {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+    .manager-sections-grid {
+        grid-template-columns: 1fr;
+    }
+    .quanly-container {
+        padding: 15px;
+    }
+    .crud-form {
+        padding: 15px;
+    }
+}

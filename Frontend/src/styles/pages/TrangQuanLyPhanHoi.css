@@ -1,0 +1,116 @@
+
+.status-cell {
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.8em;
+    min-width: 90px;
+    text-align: center;
+}
+
+.status-chuaxuly {
+    color: var(--danger-color);
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.status-daxuly {
+    color: var(--accent-color);
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.feedback-content-cell {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: help;
+}
+
+.feedback-content-cell:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    word-break: break-word;
+    position: relative;
+    z-index: 1;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.quanly-container .manager-sections-grid-phanhoi { /* Class mới cho grid của trang phản hồi */
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr; /* Cột trái 25%, cột phải 75% */
+    gap: 20px;
+    align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+    .quanly-container .manager-sections-grid-phanhoi {
+        grid-template-columns: 1fr;
+    }
+}
+.filter-section {
+    background-color: #fdfdfd;
+    padding: 20px;
+}
+
+.filter-section h2 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-color-dark);
+}
+
+.filter-group input[type="text"],
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.filter-section .action-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--text-color-light);
+}
+.filter-section .action-btn:hover {
+    background-color: #5a6268;
+}
+
+.feedback-summary {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color);
+}
+.feedback-summary h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+}
+.feedback-summary p {
+    margin: 5px 0;
+}
+.pending-count {
+    font-weight: bold;
+    color: var(--danger-color);
+    font-size: 1.2em;
+}

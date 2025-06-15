@@ -1,0 +1,191 @@
+/* BUTTONS & ACTIONS */
+.action-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.action-btn:hover:not(:disabled) {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.add-btn { background-color: var(--accent-color); }
+.add-btn:hover:not(:disabled) { background-color: var(--accent-dark-color); }
+
+.save-btn { background-color: var(--primary-color); }
+.save-btn:hover:not(:disabled) { background-color: var(--primary-dark-color); }
+
+.cancel-btn { background-color: var(--text-color-light); }
+.cancel-btn:hover:not(:disabled) { background-color: #5a6268; }
+
+.edit-btn { background-color: var(--warning-color); color: var(--text-color-dark); }
+.edit-btn:hover:not(:disabled) { background-color: #e0a800; }
+
+.delete-btn { background-color: var(--danger-color); }
+.delete-btn:hover:not(:disabled) { background-color: var(--danger-dark-color); }
+
+.action-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+    box-shadow: none;
+}
+
+/* FORMS & INPUTS */
+.crud-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Thay đổi: Tăng khoảng cách giữa các trường */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 20px;
+}
+
+.crud-form h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: var(--text-color-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.crud-form label {
+    font-weight: 500;
+    color: var(--text-color-dark);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.crud-form input,
+.crud-form select,
+.crud-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.95em;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.crud-form input:focus,
+.crud-form select:focus,
+.crud-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.crud-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* Thay đổi: Căn nút về bên phải */
+    margin-top: 10px;
+}
+
+.form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    transform: scale(1.2);
+}
+
+/* LISTS & TABLES */
+.item-list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.item-list table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.item-list th, .item-list td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.item-list th {
+    background-color: var(--light-bg-color);
+    color: var(--text-color-dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85em;
+}
+
+.item-list td {
+    color: var(--text-color-dark);
+}
+
+.item-list tr:hover {
+    background-color: #f0f0f0;
+}
+
+.item-list .actions {
+    display: flex;
+    gap: 8px; /* Thay đổi: Tăng khoảng cách giữa các nút action */
+    flex-wrap: wrap;
+}
+
+.item-list.scrollable-table {
+    overflow-x: auto;
+}
+
+/* UI MESSAGES (Thông báo chung) */
+.ui-message {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.ui-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.ui-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.ui-message.info {
+    background-color: #cce5ff;
+    color: #004085;
+    border: 1px solid #b8daff;
+}
+
+/* Animation cho thông báo */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

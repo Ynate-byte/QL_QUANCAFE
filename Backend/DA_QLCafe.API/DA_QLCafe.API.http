@@ -1,0 +1,6 @@
+@DA_QLCafe.API_HostAddress = http://localhost:5129
+
+GET {{DA_QLCafe.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

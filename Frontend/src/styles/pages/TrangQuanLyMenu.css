@@ -1,0 +1,214 @@
+/* src/styles/pages/TrangQuanLyMenu.css */
+
+.manager-grid-menu {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.danh-muc-manager .add-form-inline {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.danh-muc-manager .add-form-inline input {
+    flex-grow: 1;
+}
+
+.danh-muc-manager .form-actions-inline {
+    display: flex;
+    gap: 8px;
+}
+
+.san-pham-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+}
+
+.san-pham-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.san-pham-form .form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.san-pham-form label {
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.image-preview-container {
+    grid-column: 1 / -1;
+    margin: 5px 0;
+}
+.image-preview {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--light-bg-color);
+}
+
+.toggle-switch-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+}
+
+.toggle-switch input { display: none; }
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 28px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--accent-color);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(22px);
+}
+
+.status-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.status-cell .status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.status-available .status-dot { background-color: var(--accent-color); }
+.status-unavailable .status-dot { background-color: var(--danger-color); }
+
+.status-available { color: var(--accent-color); }
+.status-unavailable { color: var(--danger-color); }
+
+/* Updated styles for table action column */
+td.actions {
+    display: flex;
+    gap: 8px; /* Tăng khoảng cách giữa các nút */
+    align-items: center;
+    justify-content: center; /* Căn giữa các nút hành động */
+    white-space: nowrap;
+    /* Không dùng min-width ở đây, để width của th kiểm soát */
+}
+/* Kích thước nút trở lại như cũ */
+td.actions .action-btn {
+    padding: 10px 15px; /* Padding mặc định của .action-btn */
+    font-size: 1em; /* Font-size mặc định của .action-btn */
+}
+
+
+.section-divider {
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 30px 0;
+}
+.san-pham-manager h3 {
+    margin: 0 0 15px 0;
+}
+
+/* New/modified style for select dropdown to match input-field */
+.san-pham-manager .form-group select.input-field {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0.95em;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-24.8%200L146.2%20206.5%2030.3%2069.4a17.6%2017.6%200%200%200-24.8%2024.8l130.4%20130.5c6.9%206.9%2017.2%206.9%2024.1%200l130.4-130.5c6.9-6.9%206.9-17.2%200-24.1z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right .7em top 50%;
+    background-size: .65em auto;
+}
+
+/* New style to control the width of the filter dropdown's container */
+.san-pham-manager .form-group.category-filter-group {
+    max-width: 180px; /* Điều chỉnh giá trị này để làm nhỏ thanh lọc */
+}
+
+/* Ensure the th.text-center utility class is effective for headers */
+.item-list th.text-center {
+    text-align: center;
+}
+/* Ensure the td.text-center utility class is effective for cells */
+.item-list td.text-center {
+    text-align: center;
+}
+
+/* Adjust padding on TH/TD for more consistent visual alignment */
+.item-list th, .item-list td {
+    padding: 10px 5px; /* Giảm padding ngang thêm một chút */
+}
+
+/* === Bổ sung để kích hoạt thanh cuộn cho bảng sản phẩm === */
+.item-list.scrollable-table {
+    max-height: 500px; /* Đặt chiều cao tối đa cho bảng trước khi cuộn (điều chỉnh theo layout của bạn) */
+    overflow-y: auto; /* Kích hoạt thanh cuộn dọc khi nội dung vượt quá max-height */
+    /* Có thể giữ overflow-x: auto nếu bảng có thể quá rộng theo chiều ngang */
+    /* overflow-x: auto; */
+}
+
+
+@media (max-width: 992px) {
+    .manager-grid-menu {
+        grid-template-columns: 1fr;
+    }
+    .san-pham-manager .form-group.category-filter-group {
+        max-width: 100%; /* Đảm bảo nó giãn ra 100% trên màn hình nhỏ */
+    }
+}
+
+@media (max-width: 768px) {
+    .san-pham-form {
+        grid-template-columns: 1fr;
+    }
+    .san-pham-form .form-group.full-width {
+        grid-column: auto;
+    }
+}
